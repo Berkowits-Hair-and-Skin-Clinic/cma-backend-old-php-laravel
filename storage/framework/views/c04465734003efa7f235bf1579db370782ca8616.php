@@ -1,0 +1,1 @@
+Payment Success<?php /**PATH C:\xampp\htdocs\rutik\live\bookappointment\resources\views/payment_success.blade.php ENDPATH**/ ?>

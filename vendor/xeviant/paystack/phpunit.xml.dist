@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         bootstrap="test/bootstrap.php"
+>
+    <testsuites>
+        <testsuite name="Paystack API Test Suite">
+            <directory>./test/</directory>
+        </testsuite>
+    </testsuites>
+
+    <groups>
+        <exclude>
+            <group>integration</group>
+        </exclude>
+    </groups>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+
+    <php>
+        <env name="PAYSTACK_PUBLIC_KEY" value="pk_1234_abcdef"/>
+        <env name="PAYSTACK_SECRET_KEY" value="sk_1234_abcdef"/>
+    </php>
+</phpunit>
